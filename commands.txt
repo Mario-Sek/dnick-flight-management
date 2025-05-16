@@ -7,6 +7,23 @@ class Food(models.Model):
     ...
 
 
+ManyToMany through model
+
+class Sale(models.Model):
+    date = models.DateField()
+    product = models.ManyToManyField('Food', through='SaleItem')
+    client = models.ForeignKey(Client, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.date}"
+
+class SaleItem(models.Model):
+    sale = models.ForeignKey(Sale, on_delete=models.CASCADE)
+    product = models.ForeignKey(Food, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField()
+
+
+
 ✅ 1. Start a new Django project
 bash
 Copy
