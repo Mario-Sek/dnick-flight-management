@@ -1,0 +1,30 @@
+✅ 1. Start a new Django project
+bash
+Copy
+Edit
+django-admin startproject projectname
+✅ 2. Create a new app inside the project
+bash
+Copy
+Edit
+python manage.py startapp appname
+✅ 3. Run the development server
+bash
+Copy
+Edit
+python manage.py runserver
+✅ 4. Make migrations (create migration files from model changes)
+bash
+Copy
+Edit
+python manage.py makemigrations
+✅ 5. Apply migrations to the database
+bash
+Copy
+Edit
+python manage.py migrate
+✅ 6. Create a superuser for Django admin
+bash
+Copy
+Edit
+python manage.py createsuperuser
